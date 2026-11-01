@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cercadia.com/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/ca/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/aviso-legal.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/aviso-legal.html"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/ca/aviso-legal.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/aviso-legal.html"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/politica-privacidad.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/politica-privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/politica-privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/ca/politica-privacidad.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/politica-privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/politica-privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/politica-cookies.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/politica-cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/politica-cookies.html"/>
+  </url>
+  <url>
+    <loc>https://cercadia.com/ca/politica-cookies.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/politica-cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/politica-cookies.html"/>
+  </url>
+</urlset>

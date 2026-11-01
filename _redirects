@@ -1,0 +1,7 @@
+# cercadia.es (alias) -> dominio principal, para evitar contenido duplicado en Google
+https://cercadia.es/*      https://cercadia.com/:splat  301!
+https://www.cercadia.es/*  https://cercadia.com/:splat  301!
+http://cercadia.es/*       https://cercadia.com/:splat  301!
+http://www.cercadia.es/*   https://cercadia.com/:splat  301!
+# subdominio de Netlify -> dominio principal
+https://cercasenior.netlify.app/*  https://cercadia.com/:splat  301!
