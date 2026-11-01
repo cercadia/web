@@ -10,7 +10,8 @@ export default {
     permalink: (data) =>
       IS_PRODUCTION && data.borrador ? false : `/blog/${data.page.fileSlug}/`,
 
-    tituloPagina: (data) => `${data.titulo} | Blog de Cercadia`,
+    // titulo_seo (opcional): título más corto para Google (máx. ~60 caracteres)
+    tituloPagina: (data) => data.titulo_seo || `${data.titulo} | Blog de Cercadia`,
     ogTitulo: (data) => data.titulo,
     descripcionPagina: (data) => data.descripcion,
     ogTipo: () => "article",

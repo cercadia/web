@@ -105,6 +105,12 @@
   .prose blockquote { border-left: 4px solid var(--terracotta); padding: 4px 0 4px 22px; font-family: 'Fraunces', serif; font-size: 22px; color: var(--navy); }
   .prose img { max-width: 100%; border-radius: 12px; }
   .prose strong { color: var(--navy); }
+  .prose table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+  .prose th, .prose td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  .prose thead th { background: var(--navy); color: #fff; font-weight: 600; }
+  .prose tbody tr:last-child td { border-bottom: none; }
+  .prose td:first-child { color: var(--navy); }
+  .prose hr { border: none; border-top: 1px solid var(--line); margin: 2.2em 0; }
   .article-cta { max-width: 720px; margin: 20px auto 100px; padding: 0 24px; }
   .article-cta-box { background: var(--navy); color: #fff; border-radius: 18px; padding: 40px; text-align: center; }
   .article-cta-box h2 { color: #fff; font-size: 28px; margin-bottom: 12px; }
@@ -143,6 +149,8 @@
     .article h1 { font-size: 32px; }
     .prose { font-size: 17px; }
     .prose h2 { font-size: 25px; }
+    .prose table { display: block; overflow-x: auto; font-size: 14px; }
+    .prose th, .prose td { padding: 10px; min-width: 130px; }
     .article-cta-box { padding: 30px 22px; }
     .post-grid { grid-template-columns: 1fr; }
   }
