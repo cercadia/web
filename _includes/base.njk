@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ tituloPagina }}</title>
+<meta name="description" content="{{ descripcionPagina }}">
+<link rel="canonical" href="{{ page.url | urlAbsoluta }}">
+<meta property="og:site_name" content="Cercadia">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="{{ ogTipo or 'website' }}">
+<meta property="og:title" content="{{ ogTitulo or tituloPagina }}">
+<meta property="og:description" content="{{ descripcionPagina }}">
+<meta property="og:url" content="{{ page.url | urlAbsoluta }}">
+{%- if ogImagen %}
+<meta property="og:image" content="{{ ogImagen | urlAbsoluta }}">
+<meta name="twitter:card" content="summary_large_image">
+{%- endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+{%- if jsonld %}
+<script type="application/ld+json">{{ jsonld | json | safe }}</script>
+{%- endif %}
+<style>
+  :root {
+    --navy: #1F4E79;
+    --navy-dark: #163A5C;
+    --cream: #F7F4EF;
+    --terracotta: #D98C56;
+    --terracotta-dark: #C1723C;
+    --ink: #2B2B2B;
+    --muted: #6B6B6B;
+    --line: #E4DFD5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background-color: var(--cream);
+    background-image: radial-gradient(rgba(31,78,121,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', serif; color: var(--navy); line-height: 1.15; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  .rhythm-strip { display: flex; gap: 6px; align-items: flex-end; height: 24px; margin: 0 auto; justify-content: center; }
+  .rhythm-strip span { width: 4px; background: var(--terracotta); border-radius: 2px; display: inline-block; }
+  .rhythm-strip span:nth-child(1){height:10px;} .rhythm-strip span:nth-child(2){height:18px;} .rhythm-strip span:nth-child(3){height:24px;}
+  .rhythm-strip span:nth-child(4){height:14px;} .rhythm-strip span:nth-child(5){height:20px;} .rhythm-strip span:nth-child(6){height:10px;} .rhythm-strip span:nth-child(7){height:16px;}
+
+  header { position: sticky; top: 0; background: rgba(247,244,239,0.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); z-index: 1000; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1080px; margin: 0 auto; }
+  .logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+  nav ul { list-style: none; display: flex; gap: 28px; }
+  nav a { font-size: 15px; font-weight: 500; color: var(--navy); }
+  nav a[aria-current="page"] { color: var(--terracotta-dark); font-weight: 700; }
+  .btn { display: inline-block; padding: 14px 30px; border-radius: 30px; font-weight: 700; font-size: 16px; transition: transform 0.15s ease; }
+  .btn-primary { background: var(--terracotta); color: #fff; }
+  .btn-primary:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: var(--navy); border: 2px solid var(--navy); padding: 12px 28px; }
+  .lang-switch { font-size: 14px; font-weight: 600; color: var(--muted); white-space: nowrap; }
+  .lang-switch a { color: var(--navy); text-decoration: underline; }
+  .lang-switch .current { color: var(--navy); }
+  .menu-toggle { display: none; background: none; border: none; font-size: 26px; color: var(--navy); cursor: pointer; }
+
+  .section-label { text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 700; color: var(--terracotta-dark); margin-bottom: 14px; }
+
+  /* --- Blog: listado --- */
+  .blog-hero { padding: 72px 0 40px; text-align: center; }
+  .blog-hero h1 { font-size: 48px; font-weight: 600; letter-spacing: -0.5px; margin: 18px 0 14px; }
+  .blog-hero p { max-width: 600px; margin: 0 auto; font-size: 18px; color: var(--muted); }
+  .post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; padding-bottom: 100px; }
+  .post-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .post-card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(31,78,121,0.10); }
+  .post-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+  .post-card-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+  .post-card h2 { font-size: 23px; margin-bottom: 10px; }
+  .post-card p { font-size: 15px; color: var(--muted); flex: 1; }
+  .post-meta { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .post-more { margin-top: 18px; font-weight: 700; font-size: 15px; color: var(--terracotta-dark); }
+  .tag-borrador { display: inline-block; background: #FCE8D6; color: var(--terracotta-dark); font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; margin-bottom: 10px; }
+  .blog-empty { max-width: 560px; margin: 0 auto 100px; text-align: center; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 44px; color: var(--muted); }
+
+  /* --- Blog: artículo --- */
+  .article { max-width: 720px; margin: 0 auto; padding: 64px 24px 40px; }
+  .article-back { display: inline-block; font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 28px; }
+  .article-back:hover { text-decoration: underline; }
+  .article h1 { font-size: 44px; font-weight: 600; letter-spacing: -0.5px; margin: 6px 0 18px; }
+  .article .post-meta { font-size: 14px; margin-bottom: 32px; }
+  .article-cover { width: 100%; border-radius: 16px; margin-bottom: 36px; display: block; }
+  .prose { font-size: 18px; line-height: 1.75; }
+  .prose > * + * { margin-top: 1.1em; }
+  .prose h2 { font-size: 30px; margin-top: 1.8em; }
+  .prose h3 { font-size: 23px; margin-top: 1.5em; }
+  .prose a { color: var(--terracotta-dark); text-decoration: underline; }
+  .prose ul, .prose ol { padding-left: 1.4em; }
+  .prose li + li { margin-top: 0.4em; }
+  .prose blockquote { border-left: 4px solid var(--terracotta); padding: 4px 0 4px 22px; font-family: 'Fraunces', serif; font-size: 22px; color: var(--navy); }
+  .prose img { max-width: 100%; border-radius: 12px; }
+  .prose strong { color: var(--navy); }
+  .article-cta { max-width: 720px; margin: 20px auto 100px; padding: 0 24px; }
+  .article-cta-box { background: var(--navy); color: #fff; border-radius: 18px; padding: 40px; text-align: center; }
+  .article-cta-box h2 { color: #fff; font-size: 28px; margin-bottom: 12px; }
+  .article-cta-box p { color: rgba(255,255,255,0.85); margin-bottom: 26px; }
+  .article-cta-box .btn-secondary { color: #fff; border-color: rgba(255,255,255,0.6); }
+  .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  footer { background: var(--navy-dark); color: #fff; padding: 50px 0 30px; text-align: center; }
+  footer .rhythm-strip span { background: var(--terracotta); }
+  footer .slogan { font-family: 'Fraunces', serif; font-size: 22px; margin: 18px 0 10px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  footer .legal { font-size: 11px; color: rgba(255,255,255,0.4); max-width: 480px; margin: 14px auto 0; }
+  footer .copy { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 24px; }
+  footer .links a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; background: var(--navy-dark); color: #fff;
+    padding: 18px 24px; display: none; flex-wrap: wrap; gap: 16px; align-items: center;
+    justify-content: space-between; z-index: 2000; box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  }
+  .cookie-banner p { font-size: 14px; margin: 0; max-width: 640px; color: rgba(255,255,255,0.9); }
+  .cookie-banner a { color: var(--terracotta); text-decoration: underline; }
+  .cookie-banner .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .cookie-btn { padding: 10px 22px; border-radius: 24px; font-weight: 700; font-size: 14px; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
+  .cookie-btn.accept { background: var(--terracotta); color: #fff; }
+  .cookie-btn.reject { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+  @media (max-width: 700px) {
+    .cookie-banner { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 760px) {
+    nav ul { display: none; }
+    .menu-toggle { display: block; }
+    .blog-hero { padding: 48px 0 28px; }
+    .blog-hero h1 { font-size: 34px; }
+    .article { padding-top: 40px; }
+    .article h1 { font-size: 32px; }
+    .prose { font-size: 17px; }
+    .prose h2 { font-size: 25px; }
+    .article-cta-box { padding: 30px 22px; }
+    .post-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="/">
+      <svg width="28" height="28" viewBox="0 0 400 400" aria-hidden="true" style="flex-shrink:0;">
+        <circle cx="160" cy="200" r="110" fill="none" stroke="#1F4E79" stroke-width="17"/>
+        <circle cx="260" cy="200" r="110" fill="#D98C56"/>
+      </svg>
+      Cercadia
+    </a>
+    <nav>
+      <ul>
+        <li><a href="/#que-es">Qué hacemos</a></li>
+        <li><a href="/#plan">Plan</a></li>
+        <li><a href="/#como-funciona">¿Empezamos?</a></li>
+        <li><a href="/blog/" aria-current="page">Blog</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch"><span class="current" aria-current="true">ES</span> · <a href="/ca/" hreflang="ca" lang="ca">CA</a></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="container">
+    <div class="rhythm-strip"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="slogan">
+      <svg width="26" height="26" viewBox="0 0 400 400" aria-hidden="true" style="flex-shrink:0;">
+        <circle cx="160" cy="200" r="110" fill="none" stroke="#F7F4EF" stroke-width="17"/>
+        <circle cx="260" cy="200" r="110" fill="#D98C56"/>
+      </svg>
+      Cercadia
+    </div>
+    <p>Pendientes de lo que importa.</p>
+    <p class="legal">Este servicio no sustituye a los sistemas de teleasistencia, atención sanitaria, atención domiciliaria ni servicios de emergencia.</p>
+    <p class="links" style="font-size:12px;margin-top:14px;">
+      <a href="/blog/">Blog</a>
+      &nbsp;·&nbsp;
+      <a href="/aviso-legal.html" target="_blank" rel="noopener">Aviso legal</a>
+      &nbsp;·&nbsp;
+      <a href="/politica-privacidad.html" target="_blank" rel="noopener">Privacidad</a>
+      &nbsp;·&nbsp;
+      <a href="/politica-cookies.html" target="_blank" rel="noopener">Cookies</a>
+      &nbsp;·&nbsp;
+      <a href="#" id="cookieSettings">Configurar cookies</a>
+    </p>
+    <p class="copy">© 2026 Cercadia. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <p>Con tu permiso, usamos cookies de Google Analytics para saber cuántas personas visitan la web y cómo la usan. No las usamos para publicidad. Puedes aceptarlas o rechazarlas, y cambiar de opinión cuando quieras desde "Configurar cookies", al pie de la página. <a href="/politica-cookies.html" target="_blank" rel="noopener">Más información</a></p>
+  <div class="cookie-actions">
+    <button class="cookie-btn reject" id="cookieReject">Rechazar</button>
+    <button class="cookie-btn accept" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script>
+  // --- Gestión de cookies: Google Analytics solo se carga si el visitante acepta ---
+  // (misma lógica que index.html; el consentimiento se comparte con el resto de la web)
+  const ANALYTICS_ENABLED = true;
+  const GA_ID = 'G-GE0CG262B6';
+
+  function loadAnalytics() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    const s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function readConsent() {
+    try { return localStorage.getItem('cookieConsent'); } catch (e) { return null; }
+  }
+  function saveConsent(v) {
+    try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+  }
+  function deleteAnalyticsCookies() {
+    document.cookie.split(';').forEach(c => {
+      const name = c.split('=')[0].trim();
+      if (name === '_ga' || name.indexOf('_ga_') === 0) {
+        ['', '.cercadia.com', 'cercadia.com'].forEach(d => {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
+        });
+      }
+    });
+  }
+
+  function showBanner() {
+    document.getElementById('cookieBanner').style.display = 'flex';
+  }
+
+  function initCookieBanner() {
+    if (!ANALYTICS_ENABLED) return;
+    const banner = document.getElementById('cookieBanner');
+    document.getElementById('cookieAccept').addEventListener('click', () => {
+      saveConsent('accepted');
+      banner.style.display = 'none';
+      loadAnalytics();
+    });
+    document.getElementById('cookieReject').addEventListener('click', () => {
+      const wasAccepted = readConsent() === 'accepted';
+      saveConsent('rejected');
+      banner.style.display = 'none';
+      deleteAnalyticsCookies();
+      if (wasAccepted) location.reload();
+    });
+    const cfg = document.getElementById('cookieSettings');
+    if (cfg) cfg.addEventListener('click', (e) => { e.preventDefault(); showBanner(); });
+
+    const consent = readConsent();
+    if (consent === 'accepted') { loadAnalytics(); return; }
+    if (consent === 'rejected') return;
+    showBanner();
+  }
+  initCookieBanner();
+</script>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navUl = document.querySelector('nav ul');
+  menuToggle.addEventListener('click', () => {
+    const visible = navUl.style.display === 'flex';
+    navUl.style.display = visible ? 'none' : 'flex';
+    navUl.style.flexDirection = 'column';
+    navUl.style.position = 'absolute';
+    navUl.style.top = '64px';
+    navUl.style.right = '24px';
+    navUl.style.background = '#fff';
+    navUl.style.padding = '16px 24px';
+    navUl.style.borderRadius = '10px';
+    navUl.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+    navUl.style.gap = '16px';
+  });
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => { if (window.innerWidth <= 760) navUl.style.display = 'none'; });
+  });
+</script>
+
+</body>
+</html>
