@@ -75,6 +75,8 @@ No necesariamente. Si estar solo es una elección y se le ve bien, hay que respe
 
 No. Son cosas distintas, aunque a veces van juntas. Si la tristeza dura semanas, afecta al sueño, al apetito o a las ganas de hacer cosas, lo adecuado es consultarlo con el médico.
 
+> **Si tú o alguien cercano tiene pensamientos de suicidio, no estáis solos.** Llama al **024**, la línea de atención a la conducta suicida (gratuita, confidencial y disponible las 24 horas), o en Cataluña también al **061**. Si hay un riesgo inmediato, llama al **112**.
+
 ---
 
 Si te has visto reflejado en este artículo y quieres hablar de la situación de tu madre o tu padre, escríbenos. Te escuchamos sin compromiso.
