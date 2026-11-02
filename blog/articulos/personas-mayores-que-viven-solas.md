@@ -2,7 +2,7 @@
 titulo: "Personas mayores que viven solas: señales de que necesita más apoyo"
 titulo_seo: "Personas mayores que viven solas: señales de alerta"
 descripcion: "Tu madre o tu padre vive solo y te dice que está bien. Estas son las señales del día a día que conviene observar y qué hacer si notas cambios, también desde lejos."
-date: 2026-11-10
+date: 2026-11-02
 ---
 
 "Mi madre dice que está bien. ¿Y si no lo está?"

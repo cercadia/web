@@ -2,7 +2,7 @@
 titulo: "Mi madre no quiere ayuda: cómo planteárselo sin que sienta que pierde su independencia"
 titulo_seo: "Mi madre no quiere ayuda: cómo planteárselo"
 descripcion: "Por qué muchas personas mayores rechazan la ayuda, qué errores conviene evitar y cómo abrir la conversación con respeto para que sea ella quien decida."
-date: 2026-11-10
+date: 2026-11-02
 ---
 
 "Yo estoy perfectamente, no necesito a nadie."

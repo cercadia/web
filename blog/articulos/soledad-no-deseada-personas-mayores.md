@@ -2,7 +2,7 @@
 titulo: "Soledad no deseada en personas mayores: cómo reconocerla y qué se puede hacer"
 titulo_seo: "Soledad no deseada en personas mayores: cómo reconocerla"
 descripcion: "Vivir solo no es lo mismo que sentirse solo. Cómo reconocer la soledad no deseada en una persona mayor, por qué conviene detectarla a tiempo y qué puede hacer la familia."
-date: 2026-11-10
+date: 2026-11-02
 ---
 
 "Estoy bien, no te preocupes". Es probablemente la frase que más oyen los hijos e hijas de personas mayores que viven solas. Y muchas veces es verdad. Pero otras veces esconde algo que cuesta nombrar: la **soledad no deseada**.

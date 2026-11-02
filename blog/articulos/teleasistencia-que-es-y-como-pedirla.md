@@ -2,7 +2,7 @@
 titulo: "Teleasistencia: qué es, si es gratuita y cómo pedirla en Cataluña"
 titulo_seo: "Teleasistencia: qué es, si es gratuita y cómo pedirla"
 descripcion: "Qué es la teleasistencia, cuándo es gratuita, cómo se pide en Cataluña y en qué se diferencia del acompañamiento telefónico. Explicado sin tecnicismos."
-date: 2026-11-10
+date: 2026-11-02
 ---
 
 Si tu madre o tu padre vive solo, es probable que alguien ya te haya hablado de la **teleasistencia**: ese botón que se lleva en la muñeca o colgado del cuello y que, al pulsarlo, pone a la persona en contacto con una central que atiende las 24 horas.
