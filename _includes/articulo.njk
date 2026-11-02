@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<article class="article">
+  <a class="article-back" href="/blog/">← Volver al blog</a>
+  {%- if borrador %}<div><span class="tag-borrador">Borrador · no se publica</span></div>{% endif %}
+  <h1>{{ titulo }}</h1>
+  <p class="post-meta">
+    {%- if autora %}Por {{ autora }} · {% endif -%}
+    <time datetime="{{ page.date | fechaISO }}">{{ page.date | fechaLarga }}</time>
+    · {{ content | minutosLectura }} min de lectura
+  </p>
+  {%- if imagen %}
+  <img class="article-cover" src="{{ imagen }}" alt="{{ imagen_alt or '' }}">
+  {%- endif %}
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>
+
+<aside class="article-cta">
+  <div class="article-cta-box">
+    <h2>¿Hablamos?</h2>
+    <p>Si esto te ha hecho pensar en alguien de tu familia, o en ti, cuéntanos vuestra situación. Te respondemos nosotras, sin compromiso.</p>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="/#contacto">Escríbenos</a>
+      <a class="btn btn-secondary" href="https://wa.me/34602443165" target="_blank" rel="noopener">WhatsApp 602 44 31 65</a>
+    </div>
+  </div>
+</aside>

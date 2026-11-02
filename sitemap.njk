@@ -1,3 +1,7 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
@@ -48,4 +52,18 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://cercadia.com/politica-cookies.html"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/politica-cookies.html"/>
   </url>
+  <url>
+    <loc>https://cercadia.com/blog/</loc>
+    {%- if collections.articulos.length %}
+    <lastmod>{{ collections.articulos[0].date | fechaISO }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- for articulo in collections.articulos %}
+  {%- if not articulo.data.borrador %}
+  <url>
+    <loc>{{ articulo.url | urlAbsoluta }}</loc>
+    <lastmod>{{ (articulo.data.actualizado or articulo.date) | fechaISO }}</lastmod>
+  </url>
+  {%- endif %}
+  {%- endfor %}
 </urlset>

@@ -1,0 +1,38 @@
+---
+layout: base.njk
+permalink: /blog/
+tituloPagina: Blog de Cercadia — Acompañar a nuestros mayores
+descripcionPagina: Artículos para familias y personas mayores sobre cómo seguir viviendo en casa con tranquilidad, rutinas, soledad no deseada y cómo estar cerca aunque haya distancia.
+---
+<section class="blog-hero">
+  <div class="container">
+    <div class="rhythm-strip"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <h1>Blog de Cercadia</h1>
+    <p>Ideas y experiencias para acompañar a nuestros mayores en su casa, a su manera.</p>
+  </div>
+</section>
+
+<div class="container">
+  {%- if collections.articulos.length %}
+  <div class="post-grid">
+    {%- for articulo in collections.articulos %}
+    <a class="post-card" href="{{ articulo.url }}">
+      {%- if articulo.data.imagen %}
+      <img src="{{ articulo.data.imagen }}" alt="{{ articulo.data.imagen_alt or '' }}" loading="lazy">
+      {%- endif %}
+      <div class="post-card-body">
+        {%- if articulo.data.borrador %}<div><span class="tag-borrador">Borrador</span></div>{% endif %}
+        <p class="post-meta"><time datetime="{{ articulo.date | fechaISO }}">{{ articulo.date | fechaLarga }}</time>{% if articulo.data.autora %} · {{ articulo.data.autora }}{% endif %}</p>
+        <h2>{{ articulo.data.titulo }}</h2>
+        <p>{{ articulo.data.descripcion }}</p>
+        <span class="post-more">Leer artículo →</span>
+      </div>
+    </a>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <div class="blog-empty">
+    <p>Muy pronto publicaremos aquí los primeros artículos.</p>
+  </div>
+  {%- endif %}
+</div>
