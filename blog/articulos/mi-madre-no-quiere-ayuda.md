@@ -3,7 +3,6 @@ titulo: "Mi madre no quiere ayuda: cómo planteárselo sin que sienta que pierde
 titulo_seo: "Mi madre no quiere ayuda: cómo planteárselo"
 descripcion: "Por qué muchas personas mayores rechazan la ayuda, qué errores conviene evitar y cómo abrir la conversación con respeto para que sea ella quien decida."
 date: 2026-11-10
-borrador: true
 ---
 
 "Yo estoy perfectamente, no necesito a nadie."
@@ -12,7 +11,6 @@ Si has intentado proponerle a tu madre o a tu padre algún tipo de apoyo, es pro
 
 No es tozudez. Detrás de ese "no" suele haber razones muy comprensibles. Entenderlas es el primer paso para plantear las cosas de otra manera.
 
-**[PENDIENTE: experiencia de Ioana o Viky. Cómo reaccionan las personas mayores cuando se les propone ayuda por primera vez y qué frases o enfoques les han funcionado.]**
 
 ## Por qué muchas personas mayores dicen que no
 

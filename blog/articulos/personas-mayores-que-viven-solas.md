@@ -3,7 +3,6 @@ titulo: "Personas mayores que viven solas: señales de que necesita más apoyo"
 titulo_seo: "Personas mayores que viven solas: señales de alerta"
 descripcion: "Tu madre o tu padre vive solo y te dice que está bien. Estas son las señales del día a día que conviene observar y qué hacer si notas cambios, también desde lejos."
 date: 2026-11-10
-borrador: true
 ---
 
 "Mi madre dice que está bien. ¿Y si no lo está?"
@@ -12,7 +11,6 @@ Es una duda que comparten muchas familias con un padre o una madre que vive solo
 
 En este artículo repasamos las señales del día a día que conviene observar y qué hacer si notas varias, también si vives lejos.
 
-**[PENDIENTE: un caso real anonimizado de Ioana o Viky para abrir el artículo. Por ejemplo: una familia que se dio cuenta tarde de un cambio que, visto a posteriori, se veía venir.]**
 
 ## Vivir solo no es un problema
 

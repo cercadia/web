@@ -3,7 +3,6 @@ titulo: "Ayudas para personas mayores en Cataluña: dependencia, teleasistencia 
 titulo_seo: "Ayudas para personas mayores en Cataluña: guía práctica"
 descripcion: "Qué ayudas públicas puede pedir una persona mayor en Cataluña, por dónde empezar y cómo funciona la ley de dependencia, paso a paso y sin tecnicismos."
 date: 2026-11-10
-borrador: true
 ---
 
 Cuando un padre o una madre empieza a necesitar más apoyo, una de las primeras preguntas de la familia es: **¿qué ayudas existen y cómo se piden?** La respuesta suele estar repartida entre la Generalitat, el ayuntamiento y otras entidades, y no siempre es fácil orientarse.
