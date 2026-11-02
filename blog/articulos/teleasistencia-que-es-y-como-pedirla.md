@@ -2,7 +2,7 @@
 titulo: "Teleasistencia: qué es, si es gratuita y cómo pedirla en Cataluña"
 titulo_seo: "Teleasistencia: qué es, si es gratuita y cómo pedirla"
 descripcion: "Qué es la teleasistencia, cuándo es gratuita, cómo se pide en Cataluña y en qué se diferencia del acompañamiento telefónico. Explicado sin tecnicismos."
-date: 2026-11-01
+date: 2026-11-10
 borrador: true
 ---
 
