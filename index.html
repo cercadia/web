@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cercadia — La tranquilidad de saber que los tuyos están bien</title>
-<meta name="description" content="Seguimiento semanal y coordinación de rutinas para personas mayores que viven en su hogar. Informe mensual claro para la familia. Sin presencia física, sin sustituir a nadie.">
+<meta name="description" content="Seguimiento telefónico regular y coordinación de rutinas para personas mayores que viven en su hogar. Informe mensual claro para la familia. Sin presencia física, sin sustituir a nadie.">
 <link rel="canonical" href="https://cercadia.com/">
 <link rel="alternate" hreflang="es" href="https://cercadia.com/">
 <link rel="alternate" hreflang="ca" href="https://cercadia.com/ca/">
@@ -168,7 +168,10 @@
   .plan-list li::before {
     content: "✔"; position: absolute; left: 0; top: 12px; color: var(--terracotta); font-weight: 700;
   }
-  .trial-note { background: var(--cream); border-radius: 10px; padding: 18px 22px; font-size: 15px; margin-bottom: 28px; }
+  .trial-note { background: var(--cream); border: 2px solid var(--terracotta); border-radius: 12px; padding: 22px 24px 20px; font-size: 15px; margin: 8px 0 28px; text-align: left; position: relative; }
+  .trial-badge { position: absolute; top: -13px; left: 22px; background: var(--terracotta); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; }
+  .trial-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin: 4px 0 8px; }
+  .trial-note p { margin: 0; line-height: 1.55; }
   .extras-note { margin-top: 30px; font-size: 15px; color: var(--muted); }
   .extras-note a { color: var(--navy); font-weight: 700; text-decoration: underline; }
 
@@ -267,7 +270,7 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-    <div class="lang-switch"><span class="current" aria-current="true">ES</span> · <a href="/ca/" hreflang="ca" lang="ca">CA</a></div>
+    <div class="lang-switch"><span class="current" aria-current="true">ES</span> · <a href="/ca/" hreflang="ca" lang="ca">CAT</a></div>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
   </div>
 </header>
@@ -280,7 +283,7 @@
     </div>
     <p class="subtitle">Pendientes de lo que importa</p>
     <h1>La tranquilidad de saber que los tuyos están bien.</h1>
-    <p class="lead">Seguimiento telefónico semanal y coordinación de rutinas para personas mayores que viven en su hogar. Informe mensual claro para la familia.</p>
+    <p class="lead">Seguimiento telefónico regular y coordinación de rutinas para personas mayores que viven en su hogar. Informe mensual claro para la familia.</p>
     <a href="#contacto" class="btn btn-primary">Pide información</a>
   </div>
 </section>
@@ -295,9 +298,9 @@
       <p class="hook-featured">Hace tiempo que no llamo a mi padre...</p>
     </div>
 
-    <p class="whatwedo">Hablamos con tu familiar por teléfono cada semana: cómo se encuentra, si mantiene sus rutinas y citas médicas, si algo en su día a día ha cambiado. Todo lo recogemos en un informe mensual claro, sin tecnicismos, para que sepas exactamente cómo está sin tener que preguntárselo tú directamente. Así respetamos su espacio y su intimidad, sin visitas ni cámaras.</p>
+    <p class="whatwedo">Hablamos con tu familiar por teléfono de forma regular: cómo se encuentra, si mantiene sus rutinas y citas médicas, si algo en su día a día ha cambiado. Todo lo recogemos en un informe mensual claro, sin tecnicismos, para que sepas exactamente cómo está sin tener que preguntárselo tú directamente. Así respetamos su espacio y su intimidad, sin visitas ni cámaras.</p>
 
-    <p class="whatwedo">Muchos de los cambios que preocupan no avisan: una comida que se salta, una cita que se olvida, un ánimo que decae poco a poco. Al hablar con él o ella cada semana, y no solo de vez en cuando, detectarlo a tiempo marca la diferencia entre prevenir un problema o tener que afrontarlo cuando esté avanzado.</p>
+    <p class="whatwedo">Muchos de los cambios que preocupan no avisan: una comida que se salta, una cita que se olvida, un ánimo que decae poco a poco. Al hablar con él o ella de forma regular, y no solo de vez en cuando, detectarlo a tiempo marca la diferencia entre prevenir un problema o tener que afrontarlo cuando esté avanzado.</p>
 
     <p class="cta-line">Así de simple. <a href="#contacto" style="color:var(--terracotta-dark);text-decoration:underline;">Escríbenos</a> y te explicamos cómo empezar.</p>
   </div>
@@ -313,7 +316,7 @@
           <p>"Me preocupa que pase algo. No enterarme a tiempo, o no saber detectarlo."</p>
         </div>
         <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:14px;">Repite las mismas preguntas o se le olvidan cosas que antes no olvidaba: una cita, una llamada, algo que acabas de contarle. A veces no es nada. A veces es la primera señal de algo a lo que conviene prestar atención.</p>
-        <p style="color:rgba(255,255,255,0.85);font-size:16px;">Salta comidas, cancela planes sin motivo claro, o su ánimo decae poco a poco sin que sepas muy bien por qué. Son cambios que, vistos uno a uno, parecen pequeños — pero que alguien pendiente cada semana puede detectar a tiempo.</p>
+        <p style="color:rgba(255,255,255,0.85);font-size:16px;">Salta comidas, cancela planes sin motivo claro, o su ánimo decae poco a poco sin que sepas muy bien por qué. Son cambios que, vistos uno a uno, parecen pequeños — pero que alguien pendiente con regularidad puede detectar a tiempo.</p>
       </div>
     </div>
 
@@ -344,11 +347,13 @@
       <p style="font-size:14px;color:var(--muted);margin-bottom:18px;">IVA incluido</p>
 
       <div class="trial-note">
-        Primer mes a <strong>49 €</strong>, con el servicio completo desde el primer día.
+        <span class="trial-badge">Para empezar</span>
+        <div class="trial-title">Primer mes de prueba: 49&nbsp;€</div>
+        <p>Después, 99&nbsp;€/mes. Sin permanencia.</p>
       </div>
 
       <ul class="plan-list">
-        <li>Contacto semanal con tu familiar (100% telefónico: sin visitas a domicilio, respetando su espacio y su intimidad)</li>
+        <li>Contacto regular con tu familiar (100% telefónico: sin visitas a domicilio, respetando su espacio y su intimidad)</li>
         <li>Informe familiar mensual</li>
         <li>Coordinación de rutinas y citas</li>
         <li>Detección temprana de cambios de conducta o de rutina</li>
@@ -357,7 +362,7 @@
         <li>Conexión con otros usuarios afines</li>
       </ul>
 
-      <a href="#contacto" class="btn btn-primary">Quiero empezar</a>
+      <a href="#contacto" class="btn btn-primary">Probar el primer mes</a>
 
       <p class="extras-note">Cada situación es distinta: si necesitáis más frecuencia de contacto, acompañamiento tras una hospitalización o una caída, u otro tipo de apoyo puntual, <a href="#contacto">consúltanos</a> y lo adaptamos.</p>
     </div>
@@ -397,7 +402,7 @@
       <div class="team-card">
         <img src="foto-ioana-final.jpg" alt="Ioana Resano" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 20px;display:block;">
         <h3>Ioana Resano</h3>
-        <p>Soy licenciada en Psicopedagogía, con larga experiencia acompañando a personas con capacidades limitadas y a sus familias. Me encargo del seguimiento semanal y de la coordinación de rutinas y citas médicas. Vivo en Montgat, soy madre de dos niños y, cuando no estoy al teléfono con alguna de nuestras familias, probablemente esté paseando por la playa.</p>
+        <p>Soy licenciada en Psicopedagogía, con larga experiencia acompañando a personas con capacidades limitadas y a sus familias. Me encargo del seguimiento y de la coordinación de rutinas y citas médicas. Vivo en Montgat, soy madre de dos niños y, cuando no estoy al teléfono con alguna de nuestras familias, probablemente esté paseando por la playa.</p>
       </div>
       <div class="team-card">
         <img src="foto-viky-final.jpg" alt="Viky Sentís" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 20px;display:block;">
@@ -432,7 +437,7 @@
         <h3>Estamos para resolver tus dudas</h3>
         <p>Puedes escribirnos desde cualquier punto de España. Te contamos cómo funciona y vemos juntos si encaja con vuestra situación.</p>
         <p><strong>Email:</strong> contacto@cercadia.com</p>
-        <p><strong>Teléfono / WhatsApp:</strong> 602 44 31 65</p>
+        <p><strong>Teléfono / WhatsApp:</strong> 632 93 21 37</p>
       </div>
       <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contacto">
