@@ -168,7 +168,10 @@
   .plan-list li::before {
     content: "✔"; position: absolute; left: 0; top: 12px; color: var(--terracotta); font-weight: 700;
   }
-  .trial-note { background: var(--cream); border-radius: 10px; padding: 18px 22px; font-size: 15px; margin-bottom: 28px; }
+  .trial-note { background: var(--cream); border: 2px solid var(--terracotta); border-radius: 12px; padding: 22px 24px 20px; font-size: 15px; margin: 8px 0 28px; text-align: left; position: relative; }
+  .trial-badge { position: absolute; top: -13px; left: 22px; background: var(--terracotta); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; }
+  .trial-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin: 4px 0 8px; }
+  .trial-note p { margin: 0; line-height: 1.55; }
   .extras-note { margin-top: 30px; font-size: 15px; color: var(--muted); }
   .extras-note a { color: var(--navy); font-weight: 700; text-decoration: underline; }
 
@@ -344,7 +347,9 @@
       <p style="font-size:14px;color:var(--muted);margin-bottom:18px;">IVA inclòs</p>
 
       <div class="trial-note">
-        Primer mes a <strong>49 €</strong>, amb el servei complet des del primer dia.
+        <span class="trial-badge">Per començar</span>
+        <div class="trial-title">Primer mes de prova: 49&nbsp;€</div>
+        <p>Després, 99&nbsp;€/mes. Sense permanència.</p>
       </div>
 
       <ul class="plan-list">
@@ -357,7 +362,7 @@
         <li>Connexió amb altres usuaris afins</li>
       </ul>
 
-      <a href="#contacto" class="btn btn-primary">Vull començar</a>
+      <a href="#contacto" class="btn btn-primary">Provar el primer mes</a>
 
       <p class="extras-note">Cada situació és diferent: si necessiteu més freqüència de contacte, acompanyament després d'una hospitalització o una caiguda, o un altre tipus de suport puntual, <a href="#contacto">consulta'ns</a> i ho adaptem.</p>
     </div>
