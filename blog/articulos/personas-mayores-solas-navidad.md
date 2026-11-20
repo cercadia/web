@@ -2,7 +2,7 @@
 titulo: "Personas mayores solas en Navidad: cómo acompañar aunque estés lejos"
 titulo_seo: "Personas mayores solas en Navidad: cómo acompañar de lejos"
 descripcion: "La Navidad puede pesar mucho a una persona mayor que vive sola. Ideas prácticas para acompañar a tu madre o tu padre aunque no puedas estar, y qué recursos existen."
-date: 2026-12-01
+date: 2026-11-20
 ---
 
 Las luces, los anuncios, las comidas familiares… Para mucha gente, diciembre es sinónimo de reencuentros. Pero para una persona mayor que vive sola, estas fechas pueden ser justo lo contrario: **el momento del año en que más se nota quién falta**.
